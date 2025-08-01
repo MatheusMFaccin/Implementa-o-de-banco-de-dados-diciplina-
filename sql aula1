@@ -107,4 +107,8 @@ insert into livroautor (fk_livro, fk_autor) values('8532512062',1);
 
 
 SELECT * FROM Livro order by titulo;
+SELECT * FROM Categoria;
+SELECT * FROM Livro join Categoria on fk_categoria = Categoria.id where tipo_categoria = 'Literatura Juvenil' order by ano;
 
+
+SELECT * FROM Livro join Categoria on fk_categoria = Categoria.id where tipo_categoria = 'Humor' or tipo_categoria = 'Fic??o Cient?fica' and Livro.ano >= 2000 and Livro.ano <= 2010;
